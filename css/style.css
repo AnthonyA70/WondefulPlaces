@@ -1,0 +1,522 @@
+:root {
+  --Orange: #ef5b2a;
+  --Putih: #ffffff;
+  --Hitam: #000000;
+  --Merah: #ff0000;
+  --NavBg: #ffffff99;
+  --Body: #f3f3f4;
+  --BgContact: #ef5b2a2f;
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; /*gunanya adalah untuk melakukan set pada dimensi elemen sehingga tidak perlu mengatur lagi dimensi elemen yang ada */
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  color: var(--Hitam);
+}
+
+/* NAVBAR */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 5%; /*artinya 1.4 x 16. sedangkan 7% adalah untuk penyesuaian responsive space*/
+  border-bottom: 1px solid #413c3c1e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: var(--NavBg);
+}
+
+/* .navigation .Nav-Iden img {
+  width: 200px;
+  float: left;
+} */
+.navigation .Nav-Iden .NI {
+  font-weight: 700;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--Hitam);
+}
+
+.navigation .Nav-Iden .NI span {
+  color: var(--Merah);
+}
+
+.navigation .navigation-nav a {
+  color: var(--Hitam);
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+}
+
+.navigation .navigation-nav a:hover {
+  color: var(--Orange);
+}
+
+.navigation .navigation-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--Orange);
+  transform: scaleX(0);
+  transition: 0.5s linear;
+}
+
+.navigation .navigation-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navigation .navigation-extra a {
+  color: var(--Hitam);
+  margin: 0 0.5rem;
+}
+
+.navigation .navigation-extra a:hover {
+  color: var(--Orange);
+}
+
+#menu {
+  display: none;
+}
+
+/* SECTION START ONE */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../images/bground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.cover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, #f3f3f4 3%, rgba(255, 255, 255, 0) 40%);
+}
+
+.cover .cover-content {
+  padding: 1.4rem 5%;
+  max-width: 60rem;
+}
+
+.cover .cover-content h1 {
+  font-size: 3rem;
+  color: var(--Putih);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.3;
+}
+
+.cover .cover-content h1 span {
+  font-style: italic;
+  color: var(--Merah);
+}
+
+.cover .cover-content .linke {
+  color: var(--Merah);
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: var(--Putih);
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* SECTION FINISH ONE */
+
+/* SECTION START TWO EXPLORE */
+.explore {
+  padding: 7rem 7% 10rem; /*Urutannya atas samping bwh*/
+}
+.explore h2 {
+  color: var(--Hitam);
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.explore .Row .img-globe img {
+  width: 100%;
+  height: 40rem;
+}
+
+.explore .Row .artikel {
+  color: var(--Hitam);
+  padding-top: 2rem;
+}
+
+.explore .Row .artikel1 {
+  float: left;
+  width: 25rem;
+  margin-left: 1.5rem;
+}
+.explore .Row .artikel1 h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--Merah);
+}
+.explore .Row .artikel2 {
+  float: left;
+  width: 25rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.explore .Row .artikel2 h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--Merah);
+}
+.explore .Row .artikel3 {
+  float: left;
+  width: 25rem;
+}
+.explore .Row .artikel3 h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--Merah);
+}
+/* SECTION FINISH TWO */
+
+/* SECTION START THREE */
+.adventure {
+  padding: 7rem 7% 5rem; /*Urutannya atas samping bwh*/
+}
+
+.adventure h2 {
+  color: var(--Hitam);
+  text-align: center;
+  font-size: 3rem;
+  font-style: italic;
+}
+
+.adventure .ad-row {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.adventure .ad-row .ad-row-img {
+  flex: 1 1 40rem;
+}
+
+.adventure .ad-row .ad-row-img img {
+  width: 100%;
+}
+
+.adventure .ad-row .ad-content {
+  flex: 1 1 60%;
+  padding: 0 1rem;
+  color: var(--Hitam);
+  text-align: center;
+  padding-top: 7rem;
+}
+
+.adventure .ad-row .ad-content h3 {
+  font-size: 4rem;
+}
+.adventure .ad-row .ad-content p {
+  font-size: 1.5rem;
+}
+
+.adventure .ad-row .ad-content a {
+  color: var(--Hitam);
+  text-decoration: underline;
+}
+.adventure .ad-row .ad-content a:hover {
+  color: var(--Orange);
+}
+/* SECTION FINISH THREE */
+
+/* SECTION START FOUR */
+.contact {
+  background-color: var(--BgContact);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.contact h2 {
+  color: var(--Hitam);
+  text-align: center;
+  font-size: 3rem;
+  font-style: italic;
+  margin-bottom: 5rem;
+}
+
+.contact .con-row {
+  display: flex;
+  /* background-color: #ef5b2a; */
+  /* background-color: var(--BgContact); */
+  /* height: 200px; */
+  margin-top: 5rem;
+  padding: 0rem 7%;
+}
+
+.contact .con-row .map {
+  flex: 1 1 50rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .con-row form {
+  flex: 1 1 50rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .con-row .input {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  /* border: 1px solid var(--Hitam); */
+  padding-left: 2rem;
+}
+
+.contact .con-row .input i {
+  color: var(--Hitam);
+}
+
+.contact .con-row .input input {
+  width: 100%;
+  height: 3rem;
+  background: none;
+  border: 1px solid var(--Hitam);
+  margin-left: 2rem;
+  border-radius: 20px;
+  padding-left: 3rem;
+}
+
+.contact .con-row button {
+  padding: 1rem 2rem;
+  background-color: var(--Orange);
+  border-radius: 25px;
+  margin-top: 2rem;
+  align-items: center;
+  margin-left: 5rem;
+  color: var(--Body);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact .con-row button:hover {
+  background-color: var(--Merah);
+}
+/* SECTION FINISH FOUR */
+
+/* SECTION START FIVE */
+.about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.about h2 {
+  color: var(--Hitam);
+  text-align: center;
+  font-size: 3rem;
+  font-style: italic;
+  margin-bottom: 5rem;
+}
+
+.about .ab-row {
+  text-align: center;
+}
+
+.about .ab-row p {
+  font-size: 3rem;
+}
+/* SECTION FINISH FIVE */
+
+/* FOOTER */
+.penutup {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--BgContact);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.penutup .sos-tup {
+  padding-bottom: 1rem;
+}
+
+.penutup .sos-tup a {
+  margin: 1rem;
+  color: var(--Hitam);
+}
+
+.penutup .sos-tup a:hover {
+  color: var(--Merah);
+}
+
+.penutup .info {
+  font-size: 1rem;
+}
+.penutup .info a {
+  color: var(--Hitam);
+}
+
+.penutup .info a:hover {
+  color: var(--Merah);
+}
+/* FOOTER */
+/* SETUP UNTUK SEMUA DEVICE */
+
+/* LAPTOP */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+    scroll-behavior: smooth;
+  }
+}
+
+/* TAB */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+    scroll-behavior: smooth;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navigation .navigation-nav {
+    /* display: none; */
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(222, 229, 232, 0.8);
+    width: 25rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navigation .navigation-nav.active {
+    right: 0;
+  }
+
+  .navigation .navigation-nav a {
+    color: var(--Warna2);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navigation .navigation-nav a::after {
+    /*gunanay uintuk mengubah elemen menjadi kekiri karna x = 0 y = 0*/
+    transform-origin: 0;
+  }
+
+  .navigation .navigation-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+
+  .explore .Row .artikel1 {
+    float: left;
+    width: 25rem;
+    margin-left: 9.5rem;
+    text-align: center;
+  }
+  .explore .Row .artikel2 {
+    float: left;
+    width: 25rem;
+    margin-left: 9.5rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .explore .Row .artikel3 {
+    float: left;
+    width: 25rem;
+    margin-left: 9.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+  }
+
+  .adventure .ad-row .ad-row-img {
+    flex: 1 1 25rem;
+  }
+
+  .adventure .ad-row .ad-content {
+    padding-top: 5rem;
+  }
+
+  .adventure .ad-row .ad-content h3 {
+    font-size: 2.5rem;
+  }
+  .adventure .ad-row .ad-content p {
+    font-size: 1rem;
+  }
+
+  .contact .con-row {
+    flex-wrap: wrap;
+  }
+
+  .contact .con-row .map {
+    height: 25rem;
+  }
+
+  .contact .con-row form {
+    padding-top: 2rem;
+  }
+
+  .contact .con-row .input {
+    margin-left: -2.2rem;
+  }
+  .contact .con-row button {
+    margin-left: 0rem;
+  }
+}
+/* MOBILE */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+    scroll-behavior: smooth;
+  }
+
+  .cover {
+    min-height: 50vh;
+  }
+
+  .explore .Row .artikel1 {
+    float: left;
+    width: 25rem;
+    margin-left: 8.5rem;
+    text-align: center;
+  }
+  .explore .Row .artikel2 {
+    float: left;
+    width: 25rem;
+    margin-left: 8.5rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .explore .Row .artikel3 {
+    float: left;
+    width: 25rem;
+    margin-left: 8.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+  }
+}
